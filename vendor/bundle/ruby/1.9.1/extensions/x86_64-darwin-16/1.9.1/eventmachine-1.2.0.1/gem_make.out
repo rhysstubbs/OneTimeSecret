@@ -1,0 +1,17 @@
+current directory: /Users/Ambermaria/sites/onetimesecret/vendor/bundle/ruby/1.9.1/gems/eventmachine-1.2.0.1/ext/fastfilereader
+/Users/Ambermaria/.rvm/rubies/ruby-1.9.3-p551/bin/ruby -r ./siteconf20170606-69438-ne5kc2.rb extconf.rb --with-cppflags=-I/usr/local/opt/openssl/include
+creating Makefile
+
+current directory: /Users/Ambermaria/sites/onetimesecret/vendor/bundle/ruby/1.9.1/gems/eventmachine-1.2.0.1/ext/fastfilereader
+make  clean
+
+current directory: /Users/Ambermaria/sites/onetimesecret/vendor/bundle/ruby/1.9.1/gems/eventmachine-1.2.0.1/ext/fastfilereader
+make
+compiling mapper.cpp
+compiling rubymain.cpp
+linking shared-object fastfilereaderext.bundle
+
+current directory: /Users/Ambermaria/sites/onetimesecret/vendor/bundle/ruby/1.9.1/gems/eventmachine-1.2.0.1/ext/fastfilereader
+make  install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 fastfilereaderext.bundle .gem.20170606-69438-16lqbe9
+installing default fastfilereaderext libraries

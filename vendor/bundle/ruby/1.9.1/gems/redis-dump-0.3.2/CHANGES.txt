@@ -1,0 +1,46 @@
+REDIS-DUMP, CHANGES
+
+#### 0.3.2 (2012-01-05) ###############################
+
+* ADDED: Support setting redis URI via REDIS_URI environment variable
+
+#### 0.3.1 (2012-01-05) ###############################
+
+* ADDED: New global option for redis-dump: -f
+
+#### 0.3.0 (2012-01-04) ###############################
+
+* ADDED: Redis::Dump.dump_strings
+* ADDED: New global options for redis-dump: -c, -O
+* CHANGED: memory optimizations for Redis::Dump#dump
+
+#### 0.2.0 (unreleased) ###############################
+
+* ADDED: Redis::Dump.chunk_size support for dump and report
+
+#### 0.1.5 (2011-06-04) ###############################
+
+* FIXED: Added drydock dependency to gemspec [Mike Dupont]
+
+#### 0.1.4 (2010-11-16) ###############################
+
+* FIXED: missing set_value_none
+
+#### 0.1.3 (2010-11-16) ###############################
+
+* ADDED: Support for dumping a specific subset of keys
+* CHANGE: Now dependent on uri-redis 0.4+
+
+#### 0.1.2 (2010-11-15) ###############################
+
+* ADDED: redis-report
+
+#### 0.1.1 (2010-11-15) ###############################
+
+* ADDED: redis-load and redis-dump executables
+* ADDED: Redis::Dump.host, Redis::Dump.port
+
+
+#### 0.1.0 (2010-11-15) ###############################
+
+Initial public release.

@@ -1,0 +1,36 @@
+current directory: /Users/Ambermaria/sites/onetimesecret/vendor/bundle/ruby/1.9.1/gems/yajl-ruby-1.1.0/ext/yajl
+/Users/Ambermaria/.rvm/rubies/ruby-1.9.3-p551/bin/ruby -r ./siteconf20170606-69438-10s6098.rb extconf.rb
+creating Makefile
+
+current directory: /Users/Ambermaria/sites/onetimesecret/vendor/bundle/ruby/1.9.1/gems/yajl-ruby-1.1.0/ext/yajl
+make  clean
+
+current directory: /Users/Ambermaria/sites/onetimesecret/vendor/bundle/ruby/1.9.1/gems/yajl-ruby-1.1.0/ext/yajl
+make
+compiling yajl.c
+compiling yajl_alloc.c
+compiling yajl_buf.c
+compiling yajl_encode.c
+compiling yajl_ext.c
+yajl_ext.c: In function 'yajl_encode_part':
+yajl_ext.c:117:21: warning: variable 'status' set but not used [-Wunused-but-set-variable]
+     yajl_gen_status status;
+                     ^
+yajl_ext.c: In function 'yajl_found_hash_key':
+yajl_ext.c:291:9: warning: ISO C90 forbids mixed declarations and code [-Wdeclaration-after-statement]
+         VALUE stringEncoded = rb_str_new2(buf);
+         ^
+yajl_ext.c: In function 'rb_yajl_parser_parse':
+yajl_ext.c:442:17: warning: variable 'stat' set but not used [-Wunused-but-set-variable]
+     yajl_status stat;
+                 ^
+compiling yajl_gen.c
+compiling yajl_lex.c
+compiling yajl_parser.c
+compiling yajl_version.c
+linking shared-object yajl/yajl.bundle
+
+current directory: /Users/Ambermaria/sites/onetimesecret/vendor/bundle/ruby/1.9.1/gems/yajl-ruby-1.1.0/ext/yajl
+make  install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 yajl.bundle .gem.20170606-69438-m8284t/yajl
+installing default yajl libraries

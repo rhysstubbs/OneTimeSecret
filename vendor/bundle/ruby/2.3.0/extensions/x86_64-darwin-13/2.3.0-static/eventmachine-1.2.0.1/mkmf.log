@@ -1,0 +1,14 @@
+"clang -o conftest -I/Applications/MAMP/Library/include/ruby-2.3.0/x86_64-darwin13 -I/Applications/MAMP/Library/include/ruby-2.3.0/ruby/backward -I/Applications/MAMP/Library/include/ruby-2.3.0 -I. -I/usr/local/opt/openssl/include -pipe conftest.c  -L. -L/Applications/MAMP/Library/lib -L. -fstack-protector     -lruby-static -framework CoreFoundation  -lpthread -ldl -lobjc "
+ld: library not found for -lruby-static
+clang: error: linker command failed with exit code 1 (use -v to see invocation)
+checked program was:
+/* begin */
+1: #include "ruby.h"
+2: 
+3: int main(int argc, char **argv)
+4: {
+5:   return 0;
+6: }
+/* end */
+
+package configuration for openssl is not found

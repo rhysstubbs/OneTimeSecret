@@ -1,0 +1,57 @@
+current directory: /Users/Ambermaria/sites/onetimesecret/vendor/bundle/ruby/2.4.0/gems/bcrypt-ruby-3.0.0/ext/mri
+/Users/Ambermaria/.rvm/rubies/ruby-2.4.0/bin/ruby -r ./siteconf20170606-38825-1far1m8.rb extconf.rb
+creating Makefile
+
+current directory: /Users/Ambermaria/sites/onetimesecret/vendor/bundle/ruby/2.4.0/gems/bcrypt-ruby-3.0.0/ext/mri
+make "DESTDIR=" clean
+
+current directory: /Users/Ambermaria/sites/onetimesecret/vendor/bundle/ruby/2.4.0/gems/bcrypt-ruby-3.0.0/ext/mri
+make "DESTDIR="
+compiling bcrypt_ext.c
+bcrypt_ext.c:27:19: warning: implicit declaration of function 'ruby_bcrypt' is invalid in C99 [-Wimplicit-function-declaration]
+    return (VALUE)ruby_bcrypt(args->output, args->key, args->salt);
+                  ^
+bcrypt_ext.c:42:25: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+            NIL_P(input) ? 0 : RSTRING_LEN(input));
+                               ^~~~~~~~~~~~~~~~~~
+/Users/Ambermaria/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:976:6: note: expanded from macro 'RSTRING_LEN'
+     RSTRING_EMBED_LEN(str) : \
+     ^~~~~~~~~~~~~~~~~~~~~~
+/Users/Ambermaria/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:972:6: note: expanded from macro 'RSTRING_EMBED_LEN'
+     (long)((RBASIC(str)->flags >> RSTRING_EMBED_LEN_SHIFT) & \
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+bcrypt_ext.c:42:25: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+            NIL_P(input) ? 0 : RSTRING_LEN(input));
+                               ^~~~~~~~~~~~~~~~~~
+/Users/Ambermaria/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:977:28: note: expanded from macro 'RSTRING_LEN'
+     RSTRING(str)->as.heap.len)
+     ~~~~~~~~~~~~~~~~~~~~~~^~~
+bcrypt_ext.c:25:14: warning: unused function 'bcrypt_wrapper' [-Wunused-function]
+static VALUE bcrypt_wrapper(void *_args) {
+             ^
+4 warnings generated.
+compiling crypt.c
+crypt.c:15:26: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      NIL_P(input) ? 0 : RSTRING_LEN(input));
+                         ^~~~~~~~~~~~~~~~~~
+/Users/Ambermaria/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:976:6: note: expanded from macro 'RSTRING_LEN'
+     RSTRING_EMBED_LEN(str) : \
+     ^~~~~~~~~~~~~~~~~~~~~~
+/Users/Ambermaria/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:972:6: note: expanded from macro 'RSTRING_EMBED_LEN'
+     (long)((RBASIC(str)->flags >> RSTRING_EMBED_LEN_SHIFT) & \
+     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+crypt.c:15:26: warning: implicit conversion loses integer precision: 'long' to 'int' [-Wshorten-64-to-32]
+      NIL_P(input) ? 0 : RSTRING_LEN(input));
+                         ^~~~~~~~~~~~~~~~~~
+/Users/Ambermaria/.rvm/rubies/ruby-2.4.0/include/ruby-2.4.0/ruby/ruby.h:977:28: note: expanded from macro 'RSTRING_LEN'
+     RSTRING(str)->as.heap.len)
+     ~~~~~~~~~~~~~~~~~~~~~~^~~
+2 warnings generated.
+compiling crypt_blowfish.c
+compiling crypt_gensalt.c
+compiling wrapper.c
+linking shared-object bcrypt_ext.bundle
+
+current directory: /Users/Ambermaria/sites/onetimesecret/vendor/bundle/ruby/2.4.0/gems/bcrypt-ruby-3.0.0/ext/mri
+make "DESTDIR=" install
+/usr/local/opt/coreutils/bin/ginstall -c -m 0755 bcrypt_ext.bundle ./.gem.20170606-38825-7c0o5b
