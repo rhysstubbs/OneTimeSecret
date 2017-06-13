@@ -1,0 +1,23 @@
+{
+  "name": "Sound in Theory",
+  "version": "1.0.0",
+  "ignore": [
+    ".jshintrc",
+    "**/*.txt"
+  ],
+  "dependencies": {
+    "jquery": "~1.12.0",
+    "fontawesome": ">= 4.5.0",
+    "respond": "~1.4.2",
+    "html5shiv": "~3.7.3",
+    "jquery-placeholder": "~2.1.0",
+    "jquery.easing": "~1.3.1",
+    "imagesloaded": "~3.2.0",
+    "magnific-popup": "~1.0.1",
+    "bootstrap-sass": "~3.3.6",
+    "FlexSlider": "*",
+    "bourbon": "~4.2.0",
+    "parsleyjs": "~2.3.3"
+  },
+  "devDependencies": {}
+}

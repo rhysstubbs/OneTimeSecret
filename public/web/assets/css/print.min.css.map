@@ -1,0 +1,9 @@
+{
+	"version": 3,
+	"file": "print.min.css",
+	"sources": [
+		"../scss/print.scss"
+	],
+	"mappings": "",
+	"names": []
+}

@@ -1,0 +1,120 @@
+{
+  // Default options
+  'functions': true,
+  'variableNameTransforms': ['dasherize']
+}
+
+{{#extend "scss"}}
+{{#content "sprites-comment"}}{{/content}}
+{{#content "sprites"}}
+{{#each sprites}}
+${{strings.name}}-sprite: ({{px.x}}, {{px.y}}, {{px.offset_x}}, {{px.offset_y}}, {{px.width}}, {{px.height}}, {{px.total_width}}, {{px.total_height}}, '{{{escaped_image}}}', '{{name}}', );
+{{/each}}
+{{#each retina_sprites}}
+${{strings.name}}-sprite: ({{px.x}}, {{px.y}}, {{px.offset_x}}, {{px.offset_y}}, {{px.width}}, {{px.height}}, {{px.total_width}}, {{px.total_height}}, '{{{escaped_image}}}', '{{name}}', );
+{{/each}}
+{{/content}}
+{{#content "spritesheet"}}
+${{spritesheet_info.strings.name_width}}: {{spritesheet.px.width}};
+${{spritesheet_info.strings.name_height}}: {{spritesheet.px.height}};
+${{spritesheet_info.strings.name_image}}: '{{{spritesheet.escaped_image}}}';
+${{spritesheet_info.strings.name_sprites}}: ({{#each sprites}}${{strings.name}}-sprite, {{/each}});
+${{spritesheet_info.strings.name}}: ({{spritesheet.px.width}}, {{spritesheet.px.height}}, '{{{spritesheet.escaped_image}}}', ${{spritesheet_info.strings.name_sprites}}, );
+${{retina_spritesheet_info.strings.name_width}}: {{retina_spritesheet.px.width}};
+${{retina_spritesheet_info.strings.name_height}}: {{retina_spritesheet.px.height}};
+${{retina_spritesheet_info.strings.name_image}}: '{{{retina_spritesheet.escaped_image}}}';
+${{retina_spritesheet_info.strings.name_sprites}}: ({{#each retina_sprites}}${{strings.name}}-sprite, {{/each}});
+${{retina_spritesheet_info.strings.name}}: ({{retina_spritesheet.px.width}}, {{retina_spritesheet.px.height}}, '{{{retina_spritesheet.escaped_image}}}', ${{retina_spritesheet_info.strings.name_sprites}}, );
+
+/*
+These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+
+The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+*/
+{{#each retina_groups}}
+${{strings.name_group_name}}: '{{name}}';
+${{name}}: ('{{name}}', ${{normal.strings.name}}-sprite, ${{retina.strings.name}}-sprite, );
+{{/each}}
+${{retina_groups_info.strings.name}}: ({{#each retina_groups}}${{name}}, {{/each}});
+{{/content}}
+{{#content "sprite-functions-comment"}}{{/content}}
+{{#content "sprite-functions" mode="append"}}
+{{#if options.functions}}
+
+/*
+The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+  It should be used with a "retina group" variable.
+
+The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+
+$icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+
+.icon-home {
+  @include retina-sprite($icon-home-group);
+}
+*/
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+{{/if}}
+{{/content}}
+
+{{#content "spritesheet-functions" mode="append"}}
+{{#if options.functions}}
+
+/*
+The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+  This yields the same output as CSS retina template but can be overridden in SCSS
+
+@include retina-sprites($retina-groups);
+*/
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}
+{{/if}}
+{{/content}}
+{{/extend}}
+
+// The base class for all sprites
+.sprite {
+  content: " ";
+  display: inline-block;
+  vertical-align: middle;
+  overflow: hidden;
+  background-image: url(${{spritesheet_info.strings.name_image}});
+  text-indent: -9999px;
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    $sprite-total-width: nth(${{spritesheet_info.strings.name}}, 1);
+    $sprite-total-height: nth(${{spritesheet_info.strings.name}}, 2);
+    background-image: url(${{retina_spritesheet_info.strings.name_image}});
+    background-size: $sprite-total-width $sprite-total-height;
+  }
+}
+
+{{#each sprites}}
+.sprite.{{strings.name}} {
+  $sprite: nth(${{strings.name}}, 2); @include sprite-position($sprite); @include sprite-width($sprite); @include sprite-height($sprite);
+}
+{{/each}}

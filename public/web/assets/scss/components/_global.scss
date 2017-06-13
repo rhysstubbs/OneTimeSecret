@@ -1,0 +1,330 @@
+
+// ------------------------------------------------------------------------------------------------------
+// GLOBAL STYLES
+
+body {
+      padding:0px;
+      margin:0px;
+      font-family: $font-family-base;
+      background:#e6e6e6;
+    }
+
+// ------------------------------------------------------------------------------------------------------
+// FLEXSLIDER DEFAULTS
+
+.flexslider {
+
+	.flex-direction-nav{
+		line-height: normal;
+	}
+}
+
+
+/* Custom container */
+    .container-narrow {
+      margin: 0 auto;
+      max-width: 640px;
+
+    }
+
+    /* Main marketing message and sign up button */
+    .jumbotron { //
+      padding:0px;
+      margin: 0px;
+      color: $gray-clouds;
+      background-color:$snow-white;
+      border:6px solid #d9d9d9;
+      	.steps{
+		padding: 15px 15px 5px 15px;
+			.options-box{
+				display: none;
+			}
+		}
+		hr{
+   			margin:0px;
+   		}
+    }
+    .optional-phrase{
+	  margin-bottom: 15px;
+	}
+    .jumbotron .heading{ 
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 1;
+      margin-top: 0px;
+      margin-bottom: 10px;
+      color: $dark-clouds;
+    }
+    .jumbotron .passphrase-dropdown{
+		text-align:right;
+		font-size:14px;
+		text-decoration: underline;
+	}
+	.passphrase-dropdown:hover{
+	  color:#000;
+    }
+    // Buttons
+    .btn-block{
+    	padding:10px;
+    	margin-bottom: 18px; 
+    	color:$snow-white;
+    	background-color:$orange-tango;
+    	border-radius: 5px;
+    	padding: 14px 24px;
+    }
+    .btn-block-copy{
+    	padding:10px 60px;    	
+    	color:$orange-tango;
+    	background-color:$snow-white;
+    	border:3px solid $orange-tango;
+    	border-radius: 5px;
+    	font-weight: 600;
+    	width: 100%;
+    	margin-bottom:18px;	
+    }
+	.btn { //
+      	font-size:14px;
+    }
+
+	// Part one text area
+    .text-block{ 
+		padding:10px;
+    	margin-bottom: 18px;
+    	font-size:14px;
+    	width:100%;
+    }
+
+    .optional-phrase{
+	  width:100%;
+	  padding:13px;	
+	  background:#f2f2f2;
+	  border:none;
+    }
+
+   	.questionmark{
+	  	margin-left: 5px;
+	}
+	
+    .jumbotron .hint {
+      font-size:11px;
+      color:#000;
+      margin:0px;
+      span{
+      	font-weight: 600;
+      }
+      .info-link{
+      	margin-right: 5px;
+      }
+    }
+
+	// important link text
+   	#important-link{   
+    	font-size: 14px;
+    	padding: 0px 20px;
+    	margin-bottom:0px;
+    	color:#000;
+    	text-align: center;
+    	span{
+    		font-weight: 600;
+    	}
+    }
+	
+	// Input secure link display
+
+ 	.copy-input-link{
+ 		width: 100%;
+ 		font-size: 14px;
+ 		padding:20px;
+ 		margin-bottom:28px;
+ 		background:#fefbe5;
+ 		border:none;
+   		background-image: url(/assets/images/link.png);
+    	background-repeat: no-repeat;
+    	text-indent: 40px;
+	}
+ 		
+	.copy-link{
+	    width: 100%;
+	    float:left;	    
+	}
+	
+	// How too section 
+	.how-to{
+		padding:0px 25px 25px 25px;
+		.heading{
+			text-align: center;
+		}
+		.how-too-step{
+			border: 2px dotted #a7a7a7;
+			margin-bottom: 20px;
+			.small{
+				font-size: 12px;
+				margin-bottom: 10px;
+				display: block;
+			}
+			.large{
+				font-size:14px;
+			}
+		}
+		.sub-heading{
+			font-size:14px;
+			text-align: center;  		
+    		margin-bottom:20px;
+    		color:#000;
+    		
+		}
+		.step1{
+			color:#000;
+			padding:15px 13px;
+			.sub-heading{
+				line-height: 32px;
+				margin:0px;
+				font-size:14px;
+				span{
+    				background:#baf0f4;
+    			}
+			}
+		}
+		.step2{
+			color:#000;
+			padding:13px 13px;
+			.copy{
+				margin-top: 15px;
+			}
+
+		}
+		.step3{
+			color:#000;
+			margin-bottom: 0px;
+			padding:10px 13px;
+			.paste{
+				margin-top: 15px;
+			}
+		}	
+	}
+
+	@media #{$xs-up} {
+		
+	    .jumbotron .steps{
+		  padding: 30px 30px 10px 30px;
+		}
+	    .jumbotron .heading{
+	      font-size: 23px;
+	      margin-bottom: 20px;
+	    }
+
+	    .text-block{
+	    	font-size:16px;
+	    }
+
+	    .btn {
+	      	font-size:18px;
+	    }
+	    #important-link{   
+    	font-size: 16px;
+		}
+		.jumbotron .hint {
+      		font-size:14px;
+      		.info-link{
+      			margin-right: 15px;
+     		 }
+      	}
+      	.info-link{
+      	margin-right: 15px;
+      	}
+		.how-to{
+			.sub-heading{
+				font-size:16px;
+				margin-bottom: 30px;
+			}
+			.how-too-step{
+				margin-bottom: 35px;
+				.small{
+					font-size: 16px;
+					margin-bottom:15px;
+				}
+				.large{
+					font-size:18px;
+				}
+			}
+		}
+			.step1{
+				padding:30px 13px;
+				.sub-heading{
+					font-size: 16px;
+				}
+			}
+			
+			.step2{
+				padding:30px 13px;
+			}
+			.step3{
+				padding:30px 13px;
+			}
+		
+
+	}
+
+	@media #{$sm-up} {
+
+		.jumbotron .passphrase-dropdown{
+			font-size:16px;
+		}
+		.optional-phrase{
+			margin-bottom: 10px;
+		}
+	
+		.jumbotron .steps{
+			padding: 52px 75px 20px 75px;
+		}
+			
+		#important-link{
+			padding:0px 40px;
+			text-align:left;
+		}
+		
+		.how-to{
+			padding:0px 75px 75px 75px;
+			
+		}
+		.copy-input-link{
+ 			font-size: 14px;
+ 		}
+ 		.copy-link{
+	   		width: 50%;
+	    	float:left;
+		}
+		.btn-block-copy{
+			width:100%;
+			margin-bottom:0px;	
+		}
+		.jumbotron .hint {
+      		font-size:15px;
+      	}
+
+	}
+
+	
+
+
+
+	
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
