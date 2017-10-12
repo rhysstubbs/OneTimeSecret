@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xml:lang="en" lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html" charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="expires" content="-1">
+    <meta name="description" content="{{description}}">
+    <meta name="keywords" content="{{keywords}}">
+    <link rel="stylesheet" type="text/css" href="/css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/normalise.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <title>Send a secret</title>
+</head>
+<body>
+<div id="wrapper">
+    <section id="header">
+        <div id="header-left">
+            <p id="header-top">Send Information Securely</p>
+            <p id="header-bottom">Via <a id="header-link"
+                                         href="http://www.soundintheory.co.uk">www.soundintheory.co.uk</a></p>
+        </div>
+
+        <div id="header-right">
+            <img src="/img/logo.png" alt="Logo" id="logo">
+        </div>
+    </section>
+    <section class="section" id="one">
+        <h2>1. Paste in your secret information</h2>
+        <form id="createSecret">
+            <fieldset>
+                <textarea id="textarea" placeholder="Enter the information you want to send" rows="10"
+                          required></textarea>
+            </fieldset>
+        </form>
+    </section>
+    <section class="section" id="two">
+        <h2>2. Create a secret link that only works once</h2>
+        <button class="btn-create" id="createSecret" type="submit">Create Secret Link</button>
+        <p><i class="fa fa-info-circle"></i> The link can only be clicked once and then it expires. <b>Do not visit
+            yourself!</b></p>
+    </section>
+    <section class="section" id="three">
+        <h2>3. Copy link and send via email, text or chat</h2>
+        <div id="link">
+            <p><i class="fa fa-chain" style="padding-right: 2%"></i>Your secure link will appear
+                here.</p>
+        </div>
+        <div id="section-three-wrap">
+            <button id="btn-copy" role="button" type="button">Copy Link</button>
+        </div>
+    </section>
+</div>
+</body>
+</html>
+
+

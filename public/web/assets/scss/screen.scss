@@ -4,33 +4,11 @@
 
 @import "utilities/bootstrap";
 @import "../../../../bower_components/fontawesome/scss/font-awesome";
-@import "../../../../bower_components/bourbon/app/assets/stylesheets/bourbon";
 @import "utilities/mixins";
 @import "utilities/grid";
-@import "utilities/sprites";
 
-@import "components/fonts";
 @import "components/global";
-@import "components/forms";
-@import "components/header";
-@import "components/footer";
 @import "utilities/pages";
-@import "components/editor";
-
-// ------------------------------------------------------------------------------------------------------
-// TEST COLUMN LAYOUT
-
-.test-col {
-	margin-bottom: 20px;
-}
-
-.test-col > .inner {
-	background: #EEE;
-	min-height: 40px;
-	padding: 10px 0px;
-	text-align: center;
-	color: #999;
-}
 
 // ------------------------------------------------------------------------------------------------------
 // INLINE MEDIA QUERY EXAMPLES
