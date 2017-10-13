@@ -17,14 +17,14 @@
 
     <section class="section" id="one">
         <h2 class="section-header">1. Paste in your secret information</h2>
-        <form id="createSecret">
+        <form id="createSecret" method="post" autocomplete="off" action="/">
             <textarea id="textarea" placeholder="Enter the information you want to send" rows="10" required></textarea>
         </form>
     </section>
 
     <section class="section" id="two">
         <h2 class="section-header">2. Create a secret link that only works once</h2>
-        <button class="btn-create" id="createSecret" type="submit">Create Secret Link</button>
+        <button class="btn-create" id="createSecret" type="submit" name="kind" value="share">Create Secret Link</button>
         <p><i class="fa fa-info-circle"></i> The link can only be clicked once and then it expires. <b>Do not visit
             yourself!</b></p>
     </section>
@@ -33,15 +33,40 @@
         <h2 class="section-header">3. Copy link and send via email, text or chat</h2>
         <div style="padding: 10px 0">
             <div id="link">
-                <p><i class="fa fa-chain" style="padding-right: 2%"></i>Your secure link will appear
-                    here.</p>
+                <p><i class="fa fa-chain" style="padding-right: 2%"></i>Your secure link will appear here.</p>
+                <input id="secreturi" class="selectable" value="" readonly="readonly">
             </div>
-
-                <button id="btn-copy" role="button" type="button">Copy Link</button>
+            <div style="padding: 10px 0">
+                <button id="btn-copy" role="button" type="button" form="createSecret">Copy Link</button>
+            </div>
         </div>
     </section>
 
 </div>
+
+<script type="text/javascript">
+    $('#createSecret textarea').on('keyup', function () {
+        var max = {{plan.options.size}};
+        var len = $(this).val().length;
+        var obj = $('#createSecret .chars-display');
+        if (len > max && obj.hasClass('lightest')) {
+            obj.removeClass('lightest');
+            obj.addClass('warning-text');
+        } else if (len <= max && obj.hasClass('warning-text')) {
+            obj.removeClass('warning-text');
+            obj.addClass('lightest');
+        }
+        var char = max - len;
+        obj.text(char);
+        var sub = $('#createSecret .generate');
+        if (len > 0 && !sub.attr('disabled')) {
+            sub.attr('disabled', true);
+        }
+        if (len == 0) {
+            sub.attr('disabled', false);
+        }
+    });
+</script>
 
 </body>
 </html>
