@@ -1,6 +1,7 @@
 body {
-    background-color: #e2e2e2;
+    background-color: #e6e6e6;
     padding: 0 9%;
+    color: #35363a;
 }
 
 #wrapper {
@@ -32,19 +33,14 @@ body {
 
 .header-link {
     text-decoration: none;
-    color: dimgrey;
-}
-
-#why {
-    padding-top: 4px;
-    text-align: right;
+    color: #35363a;
 }
 
 .sections {
     padding: 5% 8%;
     background-color: #fff;
-    border-left: solid darkgrey 5px;
-    border-right: solid darkgrey 5px;
+    border-left: solid #d9d9d9 5px;
+    border-right: solid #d9d9d9 5px;
 }
 
 .text-input {
@@ -56,29 +52,29 @@ body {
 }
 
 #one {
-    border-top: solid darkgrey 5px;
-    border-bottom: solid darkgrey 0.3px;
+    border-top: solid #d9d9d9 5px;
+    border-bottom: solid #cccccc 0.3px;
 }
 
 #two {
-    border-top: solid darkgrey 0.5px;
-    border-bottom: solid darkgrey 5px;
+    border-top: solid #cccccc 0.5px;
+    border-bottom: solid #d9d9d9 5px;
 }
 
 #three {
-    border-top: solid darkgrey 5px;
-    border-bottom: solid darkgrey 5px;
+    border-top: solid #d9d9d9 5px;
+    border-bottom: solid #d9d9d9 5px;
 }
 
 #textarea {
     width: 97%;
     resize: none;
-    border: solid lightgrey 3px;
+    border: solid #e6e6e6 3px;
 }
 
 #textarea::placeholder {
     padding: 15px;
-    color: lightgrey;
+    color: #b3b3b3;
 }
 
 .btn-create {
@@ -93,15 +89,15 @@ body {
 }
 
 #link {
-    background-color: #fff8ce;
+    background-color: #fefbe5;
     padding: 3% 7%;
-    color: #63615e;
+    color: #a4a69f;
 }
 
 #secreturi {
     width: 90%;
     border: none;
-    background-color: #fff8ce;
+    background-color: #fefbe5;
 }
 
 #btn-copy {
@@ -121,6 +117,20 @@ body {
 
 .btn-create:hover {
     background-color: rgba(238, 113, 40, 0.9);
+}
+
+#error {
+    text-align: center;
+    background-color: #fff;
+    border: #ee7128 3px solid;
+    border-radius: 30px;
+    padding: 30px 0;
+    margin-top: 30%;
+}
+
+#img-error {
+    height: auto;
+    width: 10%;
 }
 
 /* Extra-Extra Small Devices, Phones */
