@@ -96,6 +96,7 @@ body {
 
 #btn-copy {
     color: #ee7128;
+    border: #ee7128 3px solid;
     border-radius: 5px;
     background-color: #fff;
     height: 55px;
@@ -104,7 +105,7 @@ body {
 }
 
 #btn-copy:hover {
-    background-color: rgba(0, 0, 0, 0.03);
+    background-color: rgba(0, 0, 0, 0.02);
     cursor: copy;
 }
 
