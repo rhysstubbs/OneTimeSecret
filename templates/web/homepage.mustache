@@ -10,63 +10,57 @@
         </div>
 
         <div id="header-right">
-            <img src="/assets/images/logo.png" alt="Logo" id="logo">
+            <img src="/img/SIT_ICON_CMYK.png" alt="Logo" id="logo">
         </div>
 
     </section>
-
-    <section class="section" id="one">
+    <section class="sections" id="one">
         <h2 class="section-header">1. Paste in your secret information</h2>
         <form id="createSecret" method="post" autocomplete="off" action="/">
-            <textarea id="textarea" placeholder="Enter the information you want to send" rows="10" required></textarea>
+            {{{add_shrimp}}}
+
+            <div class="text-input">
+                <textarea rows="7" class="btn-block" id="textarea" name="secret" autocomplete="off"
+                          placeholder="{{i18n.COMMON.secret_placeholder}}"></textarea>
+                <div class="chars-display lightest"></div>
+            </div>
         </form>
     </section>
 
-    <section class="section" id="two">
-        <h2 class="section-header">2. Create a secret link that only works once</h2>
-        <button class="btn-create" id="createSecret" type="submit" name="kind" value="share">Create Secret Link</button>
-        <p><i class="fa fa-info-circle"></i> The link can only be clicked once and then it expires. <b>Do not visit
-            yourself!</b></p>
-    </section>
-
-    <section class="section" id="three">
-        <h2 class="section-header">3. Copy link and send via email, text or chat</h2>
-        <div style="padding: 10px 0">
-            <div id="link">
-                <p><i class="fa fa-chain" style="padding-right: 2%"></i>Your secure link will appear here.</p>
-                <input id="secreturi" class="selectable" value="" readonly="readonly">
-            </div>
-            <div style="padding: 10px 0">
-                <button id="btn-copy" role="button" type="button" form="createSecret">Copy Link</button>
-            </div>
+    <section class="sections" id="two">
+        <div>
+            <h2 class="section-header">2. Create a secret link that only works once</h2>
+            <button class="btn-create" type="submit" name="kind" form="createSecret"
+                    value="share">{{i18n.COMMON.button_create_secret}}{{^authenticated}}*{{/authenticated}}</button>
+            <p><i class="fa fa-info-circle"></i> The link can only be clicked once and then it expires. <b>Do not
+                visit
+                yourself!</b></p>
         </div>
     </section>
 
+    <script type="text/javascript">
+        $('#createSecret textarea').on('keyup', function () {
+            var max = {{plan.options.size}};
+            var len = $(this).val().length;
+            var obj = $('#createSecret .chars-display');
+            if (len > max && obj.hasClass('lightest')) {
+                obj.removeClass('lightest');
+                obj.addClass('warning-text');
+            } else if (len <= max && obj.hasClass('warning-text')) {
+                obj.removeClass('warning-text');
+                obj.addClass('lightest');
+            }
+            var char = max - len;
+            obj.text(char);
+            var sub = $('#createSecret .generate');
+            if (len > 0 && !sub.attr('disabled')) {
+                sub.attr('disabled', true);
+            }
+            if (len == 0) {
+                sub.attr('disabled', false);
+            }
+        });
+    </script>
+
 </div>
-
-<script type="text/javascript">
-    $('#createSecret textarea').on('keyup', function () {
-        var max = {{plan.options.size}};
-        var len = $(this).val().length;
-        var obj = $('#createSecret .chars-display');
-        if (len > max && obj.hasClass('lightest')) {
-            obj.removeClass('lightest');
-            obj.addClass('warning-text');
-        } else if (len <= max && obj.hasClass('warning-text')) {
-            obj.removeClass('warning-text');
-            obj.addClass('lightest');
-        }
-        var char = max - len;
-        obj.text(char);
-        var sub = $('#createSecret .generate');
-        if (len > 0 && !sub.attr('disabled')) {
-            sub.attr('disabled', true);
-        }
-        if (len == 0) {
-            sub.attr('disabled', false);
-        }
-    });
-</script>
-
 </body>
-</html>

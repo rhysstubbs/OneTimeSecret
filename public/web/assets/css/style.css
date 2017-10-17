@@ -1,7 +1,6 @@
 body {
     background-color: #e2e2e2;
     padding: 0 9%;
-    font-size: 100%;
 }
 
 #wrapper {
@@ -20,7 +19,7 @@ body {
 
 #logo {
     height: auto;
-    max-width: 100%;
+    max-width: 15%;
 }
 
 #header-left {
@@ -43,6 +42,10 @@ body {
     border-right: solid darkgrey 5px;
 }
 
+.section-inner {
+    padding: 10px 0;
+}
+
 #one {
     border-top: solid darkgrey 5px;
     border-bottom: solid darkgrey 0.3px;
@@ -50,11 +53,12 @@ body {
 
 #two {
     border-top: solid darkgrey 0.5px;
-    border-bottom: solid darkgrey 0.5px;
+    border-bottom: solid darkgrey 5px;
 }
 
 #three {
-    border-top: solid darkgrey 0.3px;
+    border-top: solid darkgrey 5px;
+    border-bottom: solid darkgrey 5px;
 }
 
 #textarea {
@@ -72,7 +76,7 @@ body {
     width: 100%;
     height: 55px;
     text-align: center;
-    background-color: #db7202;
+    background-color: #ee7128;
     border-radius: 5px;
     border: none;
     color: #fff;
@@ -80,25 +84,23 @@ body {
 
 #link {
     background-color: #fff8ce;
-    padding: 1% 7%;
+    padding: 3% 7%;
     color: #63615e;
 }
 
-#warning {
-    background-color: #ff7777;
-    color: #63615e;
-    float: left;
-    width: 50%
+#secreturi {
+    width: 90%;
+    border: none;
+    background-color: #fff8ce;
 }
+
 #btn-copy {
-    border: solid 3px #ff9900;
-    color: #db7202;
+    color: #ee7128;
     border-radius: 5px;
     background-color: #fff;
     height: 55px;
     width: 50%;
     font-size: 18px;
-    float: left;
 }
 
 #btn-copy:hover {
@@ -107,42 +109,23 @@ body {
 }
 
 .btn-create:hover {
-    background-color: rgba(219, 114, 2, 0.9);
-}
-
-#section-three-wrap {
-    padding: 30px 0;
+    background-color: rgba(238, 113, 40, 0.9);
 }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 480px) {
 
-    body h2 {
-        font-size: 16px;
-    }
-
-    #header-left {
-        float: none;
-        display: none;
-    }
 }
-
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
-    #header p {
-        font-size: 20px;
-    }
-
     #btn-copy {
         width: 100%;
     }
 }
-
 /* Medium Devices, Desktops */
 @media only screen and (min-width: 992px) {
 
 }
-
 /* Large Devices, Wide Screens */
 @media only screen and (min-width: 1200px) {
 

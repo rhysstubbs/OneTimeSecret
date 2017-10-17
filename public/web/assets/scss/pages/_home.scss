@@ -33,7 +33,7 @@
   color: dimgrey;
 }
 
-.section {
+.sections {
   padding: 5% 8%;
   background-color: #fff;
   border-left: solid darkgrey 5px;
@@ -52,6 +52,7 @@
 
 #three {
   border-top: solid darkgrey 0.3px;
+  border-bottom: solid darkgrey 5px;
 }
 
 #textarea {
@@ -96,7 +97,6 @@
   height: 55px;
   width: 50%;
   font-size: 18px;
-  float: left;
 }
 
 #btn-copy:hover {
@@ -113,7 +113,7 @@
 }
 
 /* Extra Small Devices, Phones */
-@media only screen and (min-width: 480px) {
+@media only screen and (max-width: 480px) {
 
   .section-header {
     font-size: 16px;
@@ -126,7 +126,7 @@
 }
 
 /* Small Devices, Tablets */
-@media only screen and (min-width: 768px) {
+@media only screen and (max-width: 768px) {
   #header p {
     font-size: 20px;
   }
@@ -141,12 +141,12 @@
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width: 992px) {
+@media only screen and (max-width: 992px) {
   .section-header {
     font-size: 24px;
   }
 }
 
 /* Large Devices, Wide Screens */
-@media only screen and (min-width: 1200px) {
+@media only screen and (max-width: 1200px) {
 }
