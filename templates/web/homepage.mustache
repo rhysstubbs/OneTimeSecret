@@ -4,26 +4,30 @@
 
     <section id="header">
         <div id="header-left">
-            <p id="header-top">Send Information Securely</p>
-            <p id="header-bottom">Via <a id="header-link"
-                                         href="http://www.soundintheory.co.uk">www.soundintheory.co.uk</a></p>
+            <h1><a class="header-link" href="/">Send Information Securely</a></h1>
+            <p class="header-link">Via <a class="header-link" href="http://www.soundintheory.co.uk">www.soundintheory.co.uk</a>
+            </p>
         </div>
 
         <div id="header-right">
             <img src="/img/SIT_ICON_CMYK.png" alt="Logo" id="logo">
         </div>
 
+        <div id="why">
+            <a href="#" class="header-link">Why is it secure?</a>
+        </div>
     </section>
+
     <section class="sections" id="one">
         <h2 class="section-header">1. Paste in your secret information</h2>
         <form id="createSecret" method="post" autocomplete="off" action="/">
             {{{add_shrimp}}}
 
-            <div class="text-input">
-                <textarea rows="7" class="btn-block" id="textarea" name="secret" autocomplete="off"
-                          placeholder="{{i18n.COMMON.secret_placeholder}}"></textarea>
-                <div class="chars-display lightest"></div>
-            </div>
+
+            <textarea rows="7" class="btn-block" id="textarea" name="secret" autocomplete="off"
+                      placeholder="Enter the information you want to send"></textarea>
+
+            <div class="chars-display lightest"></div>
         </form>
     </section>
 
@@ -31,7 +35,7 @@
         <div>
             <h2 class="section-header">2. Create a secret link that only works once</h2>
             <button class="btn-create" type="submit" name="kind" form="createSecret"
-                    value="share">{{i18n.COMMON.button_create_secret}}{{^authenticated}}*{{/authenticated}}</button>
+                    value="share">{{i18n.COMMON.button_create_secret}}{{^authenticated}}{{/authenticated}}</button>
             <p><i class="fa fa-info-circle"></i> The link can only be clicked once and then it expires. <b>Do not
                 visit
                 yourself!</b></p>
@@ -61,6 +65,5 @@
             }
         });
     </script>
-
 </div>
 </body>
