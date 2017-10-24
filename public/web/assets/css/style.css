@@ -20,7 +20,7 @@ body {
 
 #logo {
     height: auto;
-    max-width: 15%;
+    max-width: 12%;
 }
 
 #header-left {
@@ -33,7 +33,7 @@ body {
 
 .header-link {
     text-decoration: none;
-    color: #35363a;
+    color: #ee7128;
 }
 
 .sections {
@@ -68,6 +68,7 @@ body {
 
 #textarea {
     width: 97%;
+    padding: 15px;
     resize: none;
     border: solid #e6e6e6 3px;
 }
@@ -112,7 +113,6 @@ body {
 
 #btn-copy:hover {
     background-color: rgba(0, 0, 0, 0.02);
-    cursor: copy;
 }
 
 .btn-create:hover {
