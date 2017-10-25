@@ -5,7 +5,7 @@
     <section id="header">
         <div id="header-left">
             <h1><a class="header-link" href="/">Send Information Securely</a></h1>
-            <p class="header-link">Via <a class="header-link" href="http://www.soundintheory.co.uk">Sound in Theory</a>
+            <p class="header-link">Via <a id="sit" href="http://www.soundintheory.co.uk">Sound in Theory</a>
             </p>
         </div>
 
@@ -20,7 +20,7 @@
             <div id="link">
                 <form id="url-form">
                     <label for="secreturi"><i class="fa fa-chain"></i></label>
-                    <input id="secreturi" class="selectable" value="{{share_uri}}" readonly="readonly" style="width: 90%"/>
+                    <input id="secreturi" class="selectable" value="{{share_uri}}" type="url" style="width: 90%" readonly autofocus/>
                 </form>
             </div>
             {{^is_destroyed}}
@@ -30,6 +30,12 @@
             <div class="section-inner">
                 <button id="btn-copy" role="button" type="button">Copy Link</button>
             </div>
+        </div>
+    </section>
+
+    <section class="footer">
+        <div>
+            <p>Provided By: <a href="http://www.soundintheory.co.uk">Sound in Theory</a> | Powered By: <a  href="https://onetimesecret.com/">One Time Secret</a></p>
         </div>
     </section>
 

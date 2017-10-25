@@ -5,7 +5,7 @@
     <section id="header">
         <div id="header-left">
             <h1><a class="header-link" href="/">Send Information Securely</a></h1>
-            <p class="header-link">Via <a class="header-link" href="http://www.soundintheory.co.uk">Sound in Theory</a>
+            <p class="header-link">Via <a id="sit" href="http://www.soundintheory.co.uk">Sound in Theory</a>
             </p>
         </div>
 
@@ -18,8 +18,6 @@
         <h2 class="section-header">1. Paste in your secret information</h2>
         <form id="createSecret" method="post" autocomplete="off" action="/">
             {{{add_shrimp}}}
-
-
             <textarea rows="7" class="btn-block" id="textarea" name="secret" autocomplete="off"
                       placeholder="Enter the information you want to send"></textarea>
 
@@ -38,6 +36,13 @@
         </div>
     </section>
 
+    <section class="footer">
+        <div>
+            <p>Provided By: <a href="http://www.soundintheory.co.uk">Sound in Theory</a> | Powered By: <a
+                    href="https://onetimesecret.com/">One Time Secret</a></p>
+        </div>
+    </section>
+
     <script type="text/javascript">
         $('#createSecret textarea').on('keyup', function () {
             var max = {{plan.options.size}};
@@ -53,12 +58,8 @@
             var char = max - len;
             obj.text(char);
             var sub = $('#createSecret .generate');
-            if (len > 0 && !sub.attr('disabled')) {
-                sub.attr('disabled', true);
-            }
-            if (len == 0) {
-                sub.attr('disabled', false);
-            }
+
+
         });
     </script>
 </div>
