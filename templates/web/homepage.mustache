@@ -42,23 +42,5 @@
                     href="https://onetimesecret.com/">One Time Secret</a></p>
         </div>
     </section>
-
-    <script type="text/javascript">
-        $('#createSecret textarea').on('keyup', function () {
-            var max = {{plan.options.size}};
-            var len = $(this).val().length;
-            var obj = $('#createSecret .chars-display');
-            if (len > max && obj.hasClass('lightest')) {
-                obj.removeClass('lightest');
-                obj.addClass('warning-text');
-            } else if (len <= max && obj.hasClass('warning-text')) {
-                obj.removeClass('warning-text');
-                obj.addClass('lightest');
-            }
-            var char = max - len;
-            obj.text(char);
-            var sub = $('#createSecret .generate');
-        });
-    </script>
 </div>
 </body>
