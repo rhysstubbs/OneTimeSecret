@@ -18,9 +18,14 @@
                 if (successful) {
                     if (copied === 0) {
                         var label = document.createElement("label");
+                        label.setAttribute("id", "copy-label");
                         var labelText = document.createTextNode("Copied!");
                         label.appendChild(labelText);
+                        var checkSymbol = document.createElement("i");
+                        checkSymbol.setAttribute("class", "fa fa-check");
                         document.getElementById('url-form').appendChild(label);
+                        label.appendChild(checkSymbol);
+                        $('#link, #secreturi').css("background-color", "#edfaeb");
                     }
                     window.getSelection().removeAllRanges();
                     copied++;
@@ -31,27 +36,28 @@
         });
 
         $('#createSecret').submit(function (ev) {
-            if(!$.trim($('#textarea').val())) {
+            if (!$.trim($('#input-textarea').val())) {
                 ev.preventDefault();
-
-                var warning = document.createElement("p");
-                warning.setAttribute("id", "warning");
-                var warningText = document.createTextNode("Oops! You did not provide anything to share");
-                warning.appendChild(warningText);
-                document.getElementById('one').appendChild(warning);
+                if (!$('#no-text-warning').length) {
+                    var warning = document.createElement("p");
+                    warning.setAttribute("id", "no-text-warning");
+                    var warningText = document.createTextNode("Oops! You did not provide anything to share");
+                    warning.appendChild(warningText);
+                    document.getElementById('one').appendChild(warning);
+                }
             }
-
         });
 
     });
 
     // ----------------------------------------------------------------------------------------------------
     // COMMON PAGE FUNCIONALITY
-    Page = function () {}
+    Page = function () {
+
+    }
 
     // ------------------------------------------------------------------------------------------------------
     // EQUAL HEIGHT GROUPS
-
     EqualHeightGroups = function (wrap, opts) {
         this.opts = $.extend({}, EqualHeightGroups.defaults, opts || {});
         this.wrap = wrap || $('body');
@@ -119,30 +125,5 @@
             }
         }, this), 500);
     }
-
-    /**
-     * CreateSecret = function () {
-        $('#createSecret textarea').on('keyup', function () {
-            var max = 25000;
-            var len = $(this).val().length;
-            var obj = $('#createSecret .chars-display');
-            if (len > max && obj.hasClass('lightest')) {
-                obj.removeClass('lightest');
-                obj.addClass('warning-text');
-            } else if (len <= max && obj.hasClass('warning-text')) {
-                obj.removeClass('warning-text');
-                obj.addClass('lightest');
-            }
-            var char = max - len;
-            obj.text(char);
-            var sub = $('#createSecret .generate');
-            if (len > 0 && !sub.attr('disabled')) {
-                sub.attr('disabled', true);
-            }
-            if (len == 0) {
-                sub.attr('disabled', false);
-            }
-        });
-     */
 
 })(jQuery);
