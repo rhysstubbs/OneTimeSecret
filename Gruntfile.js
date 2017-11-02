@@ -49,7 +49,7 @@ module.exports = function(grunt) {
           sourceMap: true
         },
         files: {
-          'public/web/assets/css/vendor.min.css': [
+          'public/web/assets/css/style.css': [
             'bower_components/FlexSlider/flexslider.css',
             'bower_components/magnific-popup/dist/magnific-popup.css'
           ]
@@ -102,6 +102,7 @@ module.exports = function(grunt) {
             //'bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js',
             //'bower_components/bootstrap-sass/assets/javascripts/bootstrap/tooltip.js',
             'bower_components/bootstrap-sass/assets/javascripts/bootstrap/transition.js',
+              'node_modules/clipboard/dist/clipboard.js',
 
             // Other JS libs
             'bower_components/parsleyjs/dist/parsley.js',

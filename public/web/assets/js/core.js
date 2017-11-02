@@ -14,8 +14,9 @@
             window.getSelection().addRange(range);
 
             try {
-                var successful = document.execCommand('copy');
-                if (successful) {
+                var clipboard = new Clipboard('#btn-copy');
+
+                clipboard.on('success', function (e) {
                     if (copied === 0) {
                         var label = document.createElement("label");
                         label.setAttribute("id", "copy-label");
@@ -29,7 +30,7 @@
                     }
                     window.getSelection().removeAllRanges();
                     copied++;
-                }
+                });
             } catch (err) {
                 alert('Oops, try copying manually!');
             }
