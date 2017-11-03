@@ -17,10 +17,13 @@
     <section class="sections" id="three">
         <h2 class="section-header">3. Copy the link below and send via email, text or chat</h2>
         <div class="section-inner">
-            <div id="link">
+            <div id="link" class="clearfix">
                 <form id="url-form">
-                    <label for="secreturi"><i class="fa fa-chain"></i></label>
-                    <input id="secreturi" class="selectable" value="{{share_uri}}" type="url" readonly autofocus/>
+                    <div id="secreturi-wrap" >
+                        <label for="secreturi"><i class="fa fa-chain"></i></label>
+                        <input id="secreturi" class="selectable" value="{{share_uri}}" type="url" readonly autofocus/>
+                    </div>
+
                 </form>
             </div>
             {{^is_destroyed}}
@@ -28,7 +31,7 @@
             {{/is_destroyed}}
 
             <div class="section-inner">
-                <button id="btn-copy" role="button" type="button" data-clipboard-target="#secreturi">Copy Link</button>
+                <button class="btn" id="btn-copy" role="button" type="button" data-clipboard-target="#secreturi">Copy Link</button>
             </div>
         </div>
     </section>

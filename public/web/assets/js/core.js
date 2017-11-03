@@ -15,10 +15,11 @@
 
             try {
                 var clipboard = new Clipboard('#btn-copy');
-
+                //var successful = document.execCommand('copy');
+                //if (successful) {
                 clipboard.on('success', function (e) {
                     if (copied === 0) {
-                        var label = document.createElement("label");
+                        var label = document.createElement("p");
                         label.setAttribute("id", "copy-label");
                         var labelText = document.createTextNode("Copied!");
                         label.appendChild(labelText);

@@ -21,14 +21,14 @@
             <textarea rows="7" class="btn-block textarea" id="input-textarea" name="secret" autocomplete="off"
                       placeholder="Enter the information you want to send"></textarea>
 
-            <div class="chars-display lightest"></div>
+            <!--div class="chars-display lightest"></div-->
         </form>
     </section>
 
     <section class="sections" id="two">
         <div>
             <h2 class="section-header">2. Create a secret link that only works once</h2>
-            <button class="btn-create" type="submit" name="kind" form="createSecret"
+            <button class="btn" id="btn-create" type="submit" name="kind" form="createSecret"
                     value="share">{{i18n.COMMON.button_create_secret}}{{^authenticated}}{{/authenticated}}</button>
             <p><i class="fa fa-info-circle"></i> The link can only be clicked once and then it expires. <b>Do not
                 visit
