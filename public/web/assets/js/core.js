@@ -1,40 +1,49 @@
-//= require jquery-1.10.2.min.js
-
 (function ($) {
 
     $(document).ready(function () {
 
+       window.page = new Page();
+
         var copied = 0;
 
-        $('#btn-copy').click(function (ev) {
-            var link = document.querySelector('#secreturi');
-            var range = document.createRange();
-            range.selectNode(link);
-            window.getSelection().removeAllRanges();
-            window.getSelection().addRange(range);
+        if (typeof Clipboard === "undefined") {
+            console.log("Not Supported.");
+            $('#btn-copy').hide();
+        } else if (Clipboard.isSupported()) {
+            $('#btn-copy').click(function () {
+                try {
+                    var clipboard = new Clipboard('#btn-copy');
+                    clipboard.on('success', function () {
+                        if (copied === 0) {
+                            var label = document.createElement("p");
+                            label.setAttribute("id", "copy-label");
+                            var labelText = document.createTextNode("Copied!");
+                            label.appendChild(labelText);
+                            var checkSymbol = document.createElement("i");
+                            checkSymbol.setAttribute("class", "fa fa-check");
+                            $('#url-form').append(label);
+                            label.appendChild(checkSymbol);
+                            $('#link, #secreturi').css("background-color", "#edfaeb");
+                        }
+                        window.getSelection().removeAllRanges();
+                        copied++;
+                    });
+                } catch (err) {
+                    alert('Oops, try copying manually!');
+                    $("#help").show();
+                }
+            });
+        }
 
-            try {
-                var clipboard = new Clipboard('#btn-copy');
-                //var successful = document.execCommand('copy');
-                //if (successful) {
-                clipboard.on('success', function (e) {
-                    if (copied === 0) {
-                        var label = document.createElement("p");
-                        label.setAttribute("id", "copy-label");
-                        var labelText = document.createTextNode("Copied!");
-                        label.appendChild(labelText);
-                        var checkSymbol = document.createElement("i");
-                        checkSymbol.setAttribute("class", "fa fa-check");
-                        document.getElementById('url-form').appendChild(label);
-                        label.appendChild(checkSymbol);
-                        $('#link, #secreturi').css("background-color", "#edfaeb");
-                    }
-                    window.getSelection().removeAllRanges();
-                    copied++;
-                });
-            } catch (err) {
-                alert('Oops, try copying manually!');
+        $("#help").hide();
+
+        $('#btn-issue').click(function () {
+            if (!$("#help").is(":visible")) {
+                $("#help").fadeIn();
+            } else {
+                $("#help").fadeOut();
             }
+            return false;
         });
 
         $('#createSecret').submit(function (ev) {
@@ -55,8 +64,8 @@
     // ----------------------------------------------------------------------------------------------------
     // COMMON PAGE FUNCIONALITY
     Page = function () {
-
-    }
+        var heightGroups = new EqualHeightGroups();
+    };
 
     // ------------------------------------------------------------------------------------------------------
     // EQUAL HEIGHT GROUPS

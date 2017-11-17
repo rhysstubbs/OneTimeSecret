@@ -1,46 +1,49 @@
 {{>header}}
 <body>
 <div id="wrapper">
+    <form id="createSecret" method="post" autocomplete="off" action="/">
+        <section id="header">
+            <div id="header-left">
+                <h1><a class="header-link" href="/">Send Information Securely</a></h1>
+                <p class="header-link">Via <a id="sit" href="http://www.soundintheory.co.uk">Sound in Theory</a>
+                </p>
+            </div>
 
-    <section id="header">
-        <div id="header-left">
-            <h1><a class="header-link" href="/">Send Information Securely</a></h1>
-            <p class="header-link">Via <a id="sit" href="http://www.soundintheory.co.uk">Sound in Theory</a>
-            </p>
-        </div>
+            <div id="header-right">
+                <img src="/img/SIT_ICON_CMYK.png" alt="Logo" id="logo">
+            </div>
+        </section>
 
-        <div id="header-right">
-            <img src="/img/SIT_ICON_CMYK.png" alt="Logo" id="logo">
-        </div>
-    </section>
+        <section class="sections" id="one">
+            <h2 class="section-header">1. Paste in your secret information</h2>
 
-    <section class="sections" id="one">
-        <h2 class="section-header">1. Paste in your secret information</h2>
-        <form id="createSecret" method="post" autocomplete="off" action="/">
             {{{add_shrimp}}}
             <textarea rows="7" class="btn-block textarea" id="input-textarea" name="secret" autocomplete="off"
                       placeholder="Enter the information you want to send"></textarea>
+            <input name="kind" value="share" type="hidden">
 
-            <!--div class="chars-display lightest"></div-->
-        </form>
-    </section>
+        </section>
 
-    <section class="sections" id="two">
-        <div>
-            <h2 class="section-header">2. Create a secret link that only works once</h2>
-            <button class="btn" id="btn-create" type="submit" name="kind" form="createSecret"
-                    value="share">{{i18n.COMMON.button_create_secret}}{{^authenticated}}{{/authenticated}}</button>
-            <p><i class="fa fa-info-circle"></i> The link can only be clicked once and then it expires. <b>Do not
-                visit
-                yourself!</b></p>
-        </div>
-    </section>
+        <section class="sections" id="two">
+            <div>
+                <h2 class="section-header">2. Create a secret link that only works once</h2>
 
-    <section class="footer">
-        <div>
-            <p>Provided By: <a href="http://www.soundintheory.co.uk">Sound in Theory</a> | Powered By: <a
-                    href="https://onetimesecret.com/">One Time Secret</a></p>
-        </div>
-    </section>
+                <input class="btn" id="btn-create" type="submit"
+                       value="{{i18n.COMMON.button_create_secret}}{{^authenticated}}*{{/authenticated}}"
+                       form="createSecret">
+
+                <p><i class="fa fa-info-circle"></i> The link can only be clicked once and then it expires. <b>Do not
+                    visit
+                    yourself!</b></p>
+            </div>
+        </section>
+
+        <section class="footer">
+            <div>
+                <p>Provided By: <a href="http://www.soundintheory.co.uk">Sound in Theory</a> | Powered By: <a
+                        href="https://onetimesecret.com/">One Time Secret</a></p>
+            </div>
+        </section>
+    </form>
 </div>
 </body>

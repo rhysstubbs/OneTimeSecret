@@ -17,13 +17,13 @@
     <section class="sections" id="three">
         <h2 class="section-header">3. Copy the link below and send via email, text or chat</h2>
         <div class="section-inner">
-            <div id="link" class="clearfix">
+            <div id="link" class="clearfix cf">
                 <form id="url-form">
-                    <div id="secreturi-wrap" >
-                        <label for="secreturi"><i class="fa fa-chain"></i></label>
-                        <input id="secreturi" class="selectable" value="{{share_uri}}" type="url" readonly autofocus/>
+                    <label id="lbl-chain" for="secreturi"><i class="fa fa-chain"></i></label>
+                    <div id="secreturi-wrap">
+                        <textarea id="secreturi" wrap="hard" class="selectable" type="url"
+                                  readonly>{{share_uri}}</textarea>
                     </div>
-
                 </form>
             </div>
             {{^is_destroyed}}
@@ -31,14 +31,105 @@
             {{/is_destroyed}}
 
             <div class="section-inner">
-                <button class="btn" id="btn-copy" role="button" type="button" data-clipboard-target="#secreturi">Copy Link</button>
+                <input value="Copy Link" type="button" class="btn" id="btn-copy" role="button"
+                       data-clipboard-target="#secreturi">
+            </div>
+
+            <div id="issue">
+                <a id="btn-issue" href="" role="button">Issue Copying <span><img src="/assets/images/sprites/info-link.png"></span></a>
             </div>
         </div>
     </section>
 
+    <section id="help" class="sections">
+        <div id="higlight-link" class="help-container">
+            <div>
+                <p class="help-text">Click the box above to highlight the link text in blue</p>
+            </div>
+
+            <div>
+                <table class="help-box">
+                    <tr>
+                        <td class="left-icon">
+                            <img src="/assets/images/sprites/arrow@2x.png">
+                        </td>
+                        <td>
+                            <p id="highlighted-text"><span class="highlighted">http://www.sound</span>inthe...</p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <div id="copy-link" class="help-container">
+            <div>
+                <p class="help-text">Next, copy the link using the shortcut below</p>
+            </div>
+
+            <div>
+                <table class="help-box">
+                    <tr>
+                        <td class="left-icon">
+                            <img src="/assets/images/sprites/copy@2x.png">
+                        </td>
+                        <td class="mac">
+
+                            <p>Macintosh</p>
+
+                            <div class="cmd">
+                                <p><span><img src="/assets/images/sprites/cmd@2x.png">+ C</span></p>
+                            </div>
+                        </td>
+                        <td class="windows">
+                            <div>
+                                <p>&nbsp;Windows</p>
+                                <p class="cmd">CTRL + C</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+        <div id="paste-link" class="help-container">
+            <div>
+                <p class="help-text">Open your email window and paste the link</p>
+            </div>
+
+            <div>
+                <table class="help-box">
+                    <tr>
+                        <td class="left-icon">
+                            <img src="/assets/images/sprites/copy@2x.png">
+                        </td>
+                        <td class="mac">
+
+                            <p>Macintosh</p>
+
+                            <div class="cmd">
+                                <p><span><img src="/assets/images/sprites/cmd@2x.png">+ C</span></p>
+                            </div>
+                        </td>
+                        <td class="windows">
+                            <div>
+                                <p>&nbsp;Windows</p>
+                                <p class="cmd">CTRL + C</p>
+                            </div>
+                        </td>
+                    </tr>
+
+                </table>
+            </div>
+        </div>
+
+    </section>
+
+
     <section class="footer">
         <div>
-            <p>Provided By: <a href="http://www.soundintheory.co.uk">Sound in Theory</a> | Powered By: <a  href="https://onetimesecret.com/">One Time Secret</a></p>
+            <p>Provided By: <a href="http://www.soundintheory.co.uk">Sound in Theory</a> | Powered By: <a
+                    href="https://onetimesecret.com/">One Time Secret</a></p>
         </div>
     </section>
 

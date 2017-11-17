@@ -79,11 +79,16 @@ body {
 
 #copy-label {
     float: left;
-    width: 30%;
+    width: 33%;
     color: #62835d;
     text-align: right;
     font-weight: bold;
-    margin: 0; !important;
+    margin: 0;
+!important;
+}
+
+#copy-label i {
+    font-size: 25px;
 }
 
 .padding-small {
@@ -116,7 +121,7 @@ body {
 
 #link {
     background-color: #fefbe5;
-    padding: 3% 7%;
+    padding: 3% 0 0 3%;
     color: #a4a69f;
 }
 
@@ -132,9 +137,10 @@ body {
 }
 
 #secreturi {
-    width: 70%;
+    width: 100%;
     border: none;
     background-color: #fefbe5;
+    resize: none;
 }
 
 #btn-copy {
@@ -147,8 +153,8 @@ body {
     font-size: 18px;
 }
 
-.controls {
-
+#lbl-chain {
+    float: left;
 }
 
 .fieldset {
@@ -157,6 +163,7 @@ body {
 
 .btn {
     cursor: pointer;
+!important;
 }
 
 #btn-view {
@@ -170,16 +177,106 @@ body {
     color: #fff;
 }
 
-#secreturi-wrap{
+#secreturi-wrap {
     float: left;
-    width: 70%;
+    width: 60%;
     line-height: 25px;
+}
+
+.float-left {
+    float: left;
+    display: block;
+}
+
+.highlighted {
+    background-color: #baf0f4;
 }
 
 .clearfix:after {
     content: "";
     display: table;
     clear: both;
+}
+
+.help-container {
+    padding: 20px 0 10px 0;
+    text-align: center;
+    font-size: 18px;
+}
+#help {
+    border-bottom: solid #d9d9d9 5px;
+}
+
+.left-icon {
+    width: 20%;
+}
+
+.help-text {
+    font-weight: 100;
+}
+
+.left-icon img {
+    width: 40px;
+    vertical-align: middle;
+}
+
+#issue {
+    text-align: right;
+    margin: 0;
+}
+
+#highlighted-text {
+    text-align: left;
+    padding-left: 24%;
+}
+
+#issue a {
+    text-decoration: none;
+    font-weight: 100;
+    color: #35363a;
+}
+
+.cmd img {
+    width: 30px;
+    vertical-align: middle;
+}
+
+#border-text {
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: none;
+    text-align: center;
+}
+
+.windows {
+    text-align: left;
+}
+
+.help-box {
+    margin: 0 auto;
+    width: 90%;
+    height: 130px;
+    border: dotted #d9d9d9 3px;
+}
+
+.cf:before,
+.cf:after {
+    content: ".";
+    display: table;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+    visibility: hidden;
+}
+
+.cf:after {
+    clear: both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+    *zoom: 1;
 }
 
 #btn-copy:hover {
@@ -230,6 +327,10 @@ body {
     #why {
         font-size: 8px;
     }
+
+    #secreturi-wrap {
+        width: 70%;
+    }
 }
 
 /* Extra Small Devices, Phones */
@@ -262,6 +363,23 @@ body {
     #header {
         padding: 15px 0 5px 0;
     }
+
+    .left-icon img {
+        width: 30px;
+    }
+
+    .cmd img  {
+        width: 20px;
+    }
+
+    .help-container {
+        font-size: 16px;
+    }
+    #highlighted-text {
+        padding-left: 16%;
+    }
+
+
 }
 
 /* Small Devices, Tablets */
