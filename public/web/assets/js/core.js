@@ -7,7 +7,6 @@
         var copied = 0;
 
         if (typeof Clipboard === "undefined") {
-            console.log("Not Supported.");
             $('#btn-copy').hide();
         } else if (Clipboard.isSupported()) {
             $('#btn-copy').click(function () {

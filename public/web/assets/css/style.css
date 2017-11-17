@@ -89,6 +89,7 @@ body {
 
 #copy-label i {
     font-size: 25px;
+    padding-left: 5px;
 }
 
 .padding-small {
@@ -203,6 +204,7 @@ body {
     text-align: center;
     font-size: 18px;
 }
+
 #help {
     border-bottom: solid #d9d9d9 5px;
 }
@@ -221,19 +223,27 @@ body {
 }
 
 #issue {
+    position: relative;
     text-align: right;
+    display: block;
+    padding: 8px 0;
+    width: 100%;
     margin: 0;
 }
 
-#highlighted-text {
-    text-align: left;
-    padding-left: 24%;
-}
-
-#issue a {
+#btn-issue {
+    position: relative;
     text-decoration: none;
     font-weight: 100;
     color: #35363a;
+    padding-right: 38px;
+    padding-top: 6px;
+}
+
+#info-icon {
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 .cmd img {
@@ -255,7 +265,7 @@ body {
 
 .help-box {
     margin: 0 auto;
-    width: 90%;
+    width: 60%;
     height: 130px;
     border: dotted #d9d9d9 3px;
 }
@@ -306,6 +316,11 @@ body {
     text-align: center;
     background-color: #fff;
     margin-top: 20%;
+}
+
+#highlighted-text {
+    text-align: center;
+    vertical-align: middle;
 }
 
 #error {
@@ -368,18 +383,13 @@ body {
         width: 30px;
     }
 
-    .cmd img  {
+    .cmd img {
         width: 20px;
     }
 
     .help-container {
         font-size: 16px;
     }
-    #highlighted-text {
-        padding-left: 16%;
-    }
-
-
 }
 
 /* Small Devices, Tablets */
@@ -395,8 +405,10 @@ body {
 }
 
 /* Medium Devices, Desktops */
-@media only screen and (min-width: 992px) {
-
+@media only screen and (max-width: 992px) {
+    .help-box {
+        width: 80%;
+    }
 }
 
 /* Large Devices, Wide Screens */
