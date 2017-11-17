@@ -1,0 +1,148 @@
+#three {
+  border-top: solid #d9d9d9 5px;
+  border-bottom: solid #d9d9d9 5px;
+}
+
+#copy-label {
+  float: left;
+  width: 33%;
+  color: #62835d;
+  text-align: right;
+  font-weight: bold;
+  margin: 0 !important;
+}
+
+#copy-label i {
+  font-size: 25px;
+  padding-left: 5px;
+}
+
+#btn-copy {
+  color: #ee7128;
+  border: #ee7128 3px solid;
+  border-radius: 5px;
+  background-color: #fff;
+  height: 55px;
+  width: 50%;
+  font-size: 18px;
+}
+
+#lbl-chain {
+  float: left;
+}
+
+#help {
+  border-bottom: solid #d9d9d9 5px;
+}
+
+.left-icon {
+  width: 20%;
+}
+
+.help-text {
+  font-weight: 100;
+}
+
+.left-icon img {
+  width: 40px;
+  vertical-align: middle;
+}
+
+#issue {
+  position: relative;
+  text-align: right;
+  display: block;
+  padding: 8px 0;
+  width: 100%;
+  margin: 0;
+}
+
+#btn-issue {
+  position: relative;
+  text-decoration: none;
+  font-weight: 100;
+  color: #35363a;
+  padding-right: 38px;
+  padding-top: 6px;
+}
+
+.help-box {
+  margin: 0 auto;
+  width: 60%;
+  height: 130px;
+  border: dotted #d9d9d9 3px;
+}
+
+#btn-copy:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+#info-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.cmd img {
+  width: 30px;
+  vertical-align: middle;
+}
+
+#highlighted-text {
+  text-align: center;
+  vertical-align: middle;
+}
+
+#border-text {
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  text-align: center;
+}
+
+.windows {
+  text-align: left;
+}
+
+.highlighted {
+  background-color: #baf0f4;
+}
+
+.help-container {
+  padding: 20px 0 10px 0;
+  text-align: center;
+  font-size: 18px;
+}
+
+#link {
+  background-color: #fefbe5;
+  padding: 3% 0 0 3%;
+  color: #a4a69f;
+}
+
+#secreturi {
+  width: 100%;
+  border: none;
+  background-color: #fefbe5;
+  resize: none;
+}
+
+#secreturi-wrap {
+  float: left;
+  width: 60%;
+  line-height: 25px;
+}
+
+.fieldset {
+  border: none;
+}
+
+.shared {
+  border: #ee7128 3px solid;
+  border-radius: 30px;
+  padding: 30px;
+  text-align: center;
+  background-color: #fff;
+  margin-top: 20%;
+}

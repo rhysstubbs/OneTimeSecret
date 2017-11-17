@@ -1,0 +1,78 @@
+
+/* Extra-Extra Small Devices, Phones */
+@media only screen and (max-width: 320px) {
+  #why {
+    font-size: 8px;
+  }
+
+  #secreturi-wrap {
+    width: 70%;
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width: 480px) {
+  body {
+    padding: 0 2%;
+    font-size: 10px;
+  }
+
+  h1 {
+    font-size: 18px;
+  }
+
+  h2 {
+    font-size: 16px;
+  }
+
+  .sections {
+    padding: 3% 4%;
+  }
+
+  textarea {
+    border: solid lightgrey 2px;
+  }
+
+  #link {
+    padding: 3% 2%;
+  }
+
+  #header {
+    padding: 15px 0 5px 0;
+  }
+
+  .left-icon img {
+    width: 30px;
+  }
+
+  .cmd img {
+    width: 20px;
+  }
+
+  .help-container {
+    font-size: 16px;
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width: 768px) {
+  body {
+    padding: 0 4%;
+    font-size: 14px;
+  }
+
+  #btn-copy {
+    width: 100%;
+  }
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width: 992px) {
+  .help-box {
+    width: 80%;
+  }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width: 1200px) {}
+

@@ -1,0 +1,33 @@
+.cf:before,
+.cf:after {
+  content: ".";
+  display: table;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+  visibility: hidden;
+}
+
+.cf:after {
+  clear: both;
+}
+
+/* For IE 6/7 (trigger hasLayout) */
+.cf {
+  *zoom: 1;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.float-left {
+  float: left;
+  display: block;
+}
+
+.padding-small {
+  padding: 20px 0;
+}

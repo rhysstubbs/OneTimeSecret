@@ -1,3 +1,42 @@
 
 // ------------------------------------------------------------------------------------------------------
 // HEADER
+
+
+#header {
+  padding: 25px 0 20px 0;
+}
+
+#header-top {
+  font-size: 30px;
+  font-weight: 900;
+}
+
+#logo {
+  height: auto;
+  max-width: 10%;
+}
+
+#header-left {
+  float: left;
+}
+
+#header-right {
+  text-align: right;
+}
+
+#sit {
+  text-decoration: none;
+  color: #ee7128;
+}
+
+.header-link {
+  text-decoration: none;
+  color: #35363a;
+}
+
+#header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
