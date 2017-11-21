@@ -1,0 +1,322 @@
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$arrow-name: 'arrow';
+$arrow-x: 29px;
+$arrow-y: 62px;
+$arrow-offset-x: -29px;
+$arrow-offset-y: -62px;
+$arrow-width: 31px;
+$arrow-height: 32px;
+$arrow-total-width: 131px;
+$arrow-total-height: 99px;
+$arrow-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png';
+$arrow: (29px, 62px, -29px, -62px, 31px, 32px, 131px, 99px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png', 'arrow', );
+$cmd-name: 'cmd';
+$cmd-x: 104px;
+$cmd-y: 0px;
+$cmd-offset-x: -104px;
+$cmd-offset-y: 0px;
+$cmd-width: 27px;
+$cmd-height: 27px;
+$cmd-total-width: 131px;
+$cmd-total-height: 99px;
+$cmd-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png';
+$cmd: (104px, 0px, -104px, 0px, 27px, 27px, 131px, 99px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png', 'cmd', );
+$copy-name: 'copy';
+$copy-x: 75px;
+$copy-y: 0px;
+$copy-offset-x: -75px;
+$copy-offset-y: 0px;
+$copy-width: 29px;
+$copy-height: 38px;
+$copy-total-width: 131px;
+$copy-total-height: 99px;
+$copy-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png';
+$copy: (75px, 0px, -75px, 0px, 29px, 38px, 131px, 99px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png', 'copy', );
+$info-link-name: 'info-link';
+$info-link-x: 60px;
+$info-link-y: 62px;
+$info-link-offset-x: -60px;
+$info-link-offset-y: -62px;
+$info-link-width: 29px;
+$info-link-height: 29px;
+$info-link-total-width: 131px;
+$info-link-total-height: 99px;
+$info-link-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png';
+$info-link: (60px, 62px, -60px, -62px, 29px, 29px, 131px, 99px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png', 'info-link', );
+$logo-name: 'logo';
+$logo-x: 0px;
+$logo-y: 0px;
+$logo-offset-x: 0px;
+$logo-offset-y: 0px;
+$logo-width: 75px;
+$logo-height: 62px;
+$logo-total-width: 131px;
+$logo-total-height: 99px;
+$logo-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png';
+$logo: (0px, 0px, 0px, 0px, 75px, 62px, 131px, 99px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png', 'logo', );
+$orange-arrow-name: 'orange-arrow';
+$orange-arrow-x: 104px;
+$orange-arrow-y: 46px;
+$orange-arrow-offset-x: -104px;
+$orange-arrow-offset-y: -46px;
+$orange-arrow-width: 20px;
+$orange-arrow-height: 13px;
+$orange-arrow-total-width: 131px;
+$orange-arrow-total-height: 99px;
+$orange-arrow-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png';
+$orange-arrow: (104px, 46px, -104px, -46px, 20px, 13px, 131px, 99px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png', 'orange-arrow', );
+$paste-name: 'paste';
+$paste-x: 0px;
+$paste-y: 62px;
+$paste-offset-x: 0px;
+$paste-offset-y: -62px;
+$paste-width: 29px;
+$paste-height: 37px;
+$paste-total-width: 131px;
+$paste-total-height: 99px;
+$paste-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png';
+$paste: (0px, 62px, 0px, -62px, 29px, 37px, 131px, 99px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png', 'paste', );
+$questionmark-name: 'questionmark';
+$questionmark-x: 104px;
+$questionmark-y: 27px;
+$questionmark-offset-x: -104px;
+$questionmark-offset-y: -27px;
+$questionmark-width: 19px;
+$questionmark-height: 19px;
+$questionmark-total-width: 131px;
+$questionmark-total-height: 99px;
+$questionmark-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png';
+$questionmark: (104px, 27px, -104px, -27px, 19px, 19px, 131px, 99px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png', 'questionmark', );
+$retina-arrow-name: 'retina_arrow';
+$retina-arrow-x: 58px;
+$retina-arrow-y: 122px;
+$retina-arrow-offset-x: -58px;
+$retina-arrow-offset-y: -122px;
+$retina-arrow-width: 62px;
+$retina-arrow-height: 63px;
+$retina-arrow-total-width: 258px;
+$retina-arrow-total-height: 196px;
+$retina-arrow-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png';
+$retina-arrow: (58px, 122px, -58px, -122px, 62px, 63px, 258px, 196px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png', 'retina_arrow', );
+$retina-cmd-name: 'retina_cmd';
+$retina-cmd-x: 206px;
+$retina-cmd-y: 0px;
+$retina-cmd-offset-x: -206px;
+$retina-cmd-offset-y: 0px;
+$retina-cmd-width: 52px;
+$retina-cmd-height: 52px;
+$retina-cmd-total-width: 258px;
+$retina-cmd-total-height: 196px;
+$retina-cmd-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png';
+$retina-cmd: (206px, 0px, -206px, 0px, 52px, 52px, 258px, 196px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png', 'retina_cmd', );
+$retina-copy-name: 'retina_copy';
+$retina-copy-x: 148px;
+$retina-copy-y: 0px;
+$retina-copy-offset-x: -148px;
+$retina-copy-offset-y: 0px;
+$retina-copy-width: 58px;
+$retina-copy-height: 74px;
+$retina-copy-total-width: 258px;
+$retina-copy-total-height: 196px;
+$retina-copy-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png';
+$retina-copy: (148px, 0px, -148px, 0px, 58px, 74px, 258px, 196px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png', 'retina_copy', );
+$retina-info-link-name: 'retina_info-link';
+$retina-info-link-x: 120px;
+$retina-info-link-y: 122px;
+$retina-info-link-offset-x: -120px;
+$retina-info-link-offset-y: -122px;
+$retina-info-link-width: 56px;
+$retina-info-link-height: 56px;
+$retina-info-link-total-width: 258px;
+$retina-info-link-total-height: 196px;
+$retina-info-link-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png';
+$retina-info-link: (120px, 122px, -120px, -122px, 56px, 56px, 258px, 196px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png', 'retina_info-link', );
+$retina-logo-name: 'retina_logo';
+$retina-logo-x: 0px;
+$retina-logo-y: 0px;
+$retina-logo-offset-x: 0px;
+$retina-logo-offset-y: 0px;
+$retina-logo-width: 148px;
+$retina-logo-height: 122px;
+$retina-logo-total-width: 258px;
+$retina-logo-total-height: 196px;
+$retina-logo-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png';
+$retina-logo: (0px, 0px, 0px, 0px, 148px, 122px, 258px, 196px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png', 'retina_logo', );
+$retina-orange-arrow-name: 'retina_orange-arrow';
+$retina-orange-arrow-x: 206px;
+$retina-orange-arrow-y: 90px;
+$retina-orange-arrow-offset-x: -206px;
+$retina-orange-arrow-offset-y: -90px;
+$retina-orange-arrow-width: 39px;
+$retina-orange-arrow-height: 25px;
+$retina-orange-arrow-total-width: 258px;
+$retina-orange-arrow-total-height: 196px;
+$retina-orange-arrow-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png';
+$retina-orange-arrow: (206px, 90px, -206px, -90px, 39px, 25px, 258px, 196px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png', 'retina_orange-arrow', );
+$retina-paste-name: 'retina_paste';
+$retina-paste-x: 0px;
+$retina-paste-y: 122px;
+$retina-paste-offset-x: 0px;
+$retina-paste-offset-y: -122px;
+$retina-paste-width: 58px;
+$retina-paste-height: 74px;
+$retina-paste-total-width: 258px;
+$retina-paste-total-height: 196px;
+$retina-paste-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png';
+$retina-paste: (0px, 122px, 0px, -122px, 58px, 74px, 258px, 196px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png', 'retina_paste', );
+$retina-questionmark-name: 'retina_questionmark';
+$retina-questionmark-x: 206px;
+$retina-questionmark-y: 52px;
+$retina-questionmark-offset-x: -206px;
+$retina-questionmark-offset-y: -52px;
+$retina-questionmark-width: 38px;
+$retina-questionmark-height: 38px;
+$retina-questionmark-total-width: 258px;
+$retina-questionmark-total-height: 196px;
+$retina-questionmark-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png';
+$retina-questionmark: (206px, 52px, -206px, -52px, 38px, 38px, 258px, 196px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png', 'retina_questionmark', );
+$spritesheet-width: 131px;
+$spritesheet-height: 99px;
+$spritesheet-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png';
+$spritesheet-sprites: ($arrow, $cmd, $copy, $info-link, $logo, $orange-arrow, $paste, $questionmark, );
+$spritesheet: (131px, 99px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite.png', $spritesheet-sprites, );
+$retina-spritesheet-width: 258px;
+$retina-spritesheet-height: 196px;
+$retina-spritesheet-image: '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png';
+$retina-spritesheet-sprites: ($retina-arrow, $retina-cmd, $retina-copy, $retina-info-link, $retina-logo, $retina-orange-arrow, $retina-paste, $retina-questionmark, );
+$retina-spritesheet: (258px, 196px, '/Users/rhys/Desktop/Projects/Finals/onetimesecret/public/assets/images/sprite@2x.png', $retina-spritesheet-sprites, );
+
+// These "retina group" variables are mappings for the naming and pairing of normal and retina sprites.
+//
+// The list formatted variables are intended for mixins like `retina-sprite` and `retina-sprites`.
+$arrow-group-name: 'arrow';
+$arrow-group: ('arrow', $arrow, $retina-arrow, );
+$cmd-group-name: 'cmd';
+$cmd-group: ('cmd', $cmd, $retina-cmd, );
+$copy-group-name: 'copy';
+$copy-group: ('copy', $copy, $retina-copy, );
+$info-link-group-name: 'info-link';
+$info-link-group: ('info-link', $info-link, $retina-info-link, );
+$logo-group-name: 'logo';
+$logo-group: ('logo', $logo, $retina-logo, );
+$orange-arrow-group-name: 'orange-arrow';
+$orange-arrow-group: ('orange-arrow', $orange-arrow, $retina-orange-arrow, );
+$paste-group-name: 'paste';
+$paste-group: ('paste', $paste, $retina-paste, );
+$questionmark-group-name: 'questionmark';
+$questionmark-group: ('questionmark', $questionmark, $retina-questionmark, );
+$retina-groups: ($arrow-group, $cmd-group, $copy-group, $info-link-group, $logo-group, $orange-arrow-group, $paste-group, $questionmark-group, );
+
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+// The `retina-sprite` mixin sets up rules and a media query for a sprite/retina sprite.
+//   It should be used with a "retina group" variable.
+//
+// The media query is from CSS Tricks: https://css-tricks.com/snippets/css/retina-display-media-query/
+//
+// $icon-home-group: ('icon-home', $icon-home, $icon-home-2x, );
+//
+// .icon-home {
+//   @include retina-sprite($icon-home-group);
+// }
+@mixin sprite-background-size($sprite) {
+  $sprite-total-width: nth($sprite, 7);
+  $sprite-total-height: nth($sprite, 8);
+  background-size: $sprite-total-width $sprite-total-height;
+}
+
+@mixin retina-sprite($retina-group) {
+  $normal-sprite: nth($retina-group, 2);
+  $retina-sprite: nth($retina-group, 3);
+  @include sprite($normal-sprite);
+
+  @media (-webkit-min-device-pixel-ratio: 2),
+         (min-resolution: 192dpi) {
+    @include sprite-image($retina-sprite);
+    @include sprite-background-size($normal-sprite);
+  }
+}
+
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
+
+// The `retina-sprites` mixin generates a CSS rule and media query for retina groups
+//   This yields the same output as CSS retina template but can be overridden in SCSS
+//
+// @include retina-sprites($retina-groups);
+@mixin retina-sprites($retina-groups) {
+  @each $retina-group in $retina-groups {
+    $sprite-name: nth($retina-group, 1);
+    .#{$sprite-name} {
+      @include retina-sprite($retina-group);
+    }
+  }
+}

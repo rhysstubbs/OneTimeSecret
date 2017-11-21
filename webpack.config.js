@@ -24,7 +24,7 @@ const configuration = {
                 test: /\.scss$/,
                 loader: ExtractTextPlugin.extract({
                     fallback: 'style-loader',
-                    use: ['css-loader', 'sass-loader'],
+                    use: ['css-loader', 'sass-loader']
                 })
             },
             {
@@ -87,7 +87,7 @@ const configuration = {
             },
             target: {
                 image: path.resolve(__dirname, 'public/assets/images/sprite.png'),
-                css: path.resolve(__dirname, 'public/assets/images/sprite.styl')
+                css: path.resolve(__dirname, 'public/assets/scss/utilities/sprite.scss')
             },
             retina: '@2x',
             padding: 2

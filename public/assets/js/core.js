@@ -21,14 +21,14 @@ require('./lib/passgen-template.js');
 
     $(document).on('ready', function () {
 
-        var copied = 0;
 
         if (!Clipboard.isSupported() || typeof Clipboard === "undefined") {
             $('#btn-copy').hide();
-	} else {
-            $('#btn-copy').click(function () {
+        } else {
+            $('#btn-copy').on('click', function () {
                 try {
                     var clipboard = new Clipboard('#btn-copy');
+                    var copied = 0;
                     clipboard.on('success', function () {
                         if (copied === 0) {
                             var label = document.createElement("p");
