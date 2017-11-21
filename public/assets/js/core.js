@@ -9,9 +9,9 @@ require('../../../../node_modules/font-awesome/scss/font-awesome.scss');
  * Core Javascript/Jquery functionality
  * Minified version -> assets/dist/app.bundle.min.js
  */
-
-require('../../../../node_modules/clipboard/dist/clipboard.js');
-require('../../../../node_modules/jquery-placeholder/jquery.placeholder.js');
+require('../../../node_modules/jquery/dist/jquery.js');
+require('../../../node_modules/clipboard/dist/clipboard.js');
+require('../../../node_modules/jquery-placeholder/jquery.placeholder.js');
 require('./lib/main.js');
 require('./lib/plugins.js');
 require('./lib/passgen-template.js');
