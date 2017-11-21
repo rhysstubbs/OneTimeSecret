@@ -16,7 +16,7 @@ require 'onetime/app/web'
 require 'onetime/app/api'
 require 'onetime/app/colonel'
 
-PUBLIC_DIR = "#{ENV['APP_ROOT']}/public/web"
+PUBLIC_DIR = "#{ENV['APP_ROOT']}/public"
 APP_DIR = "#{ENV['APP_ROOT']}/lib/onetime/app"
 
 apps = {
