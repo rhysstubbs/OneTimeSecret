@@ -11,7 +11,7 @@ const configuration = {
         fs: 'empty'
     },
     entry: {
-        app: './public/web/assets/js/core.js'
+        app: './public/assets/js/core.js'
     },
     output: {
         path: path.resolve(__dirname, 'public/web/assets/dist'),
