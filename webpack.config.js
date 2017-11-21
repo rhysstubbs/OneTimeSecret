@@ -14,8 +14,8 @@ const configuration = {
         app: './public/assets/js/core.js'
     },
     output: {
-        path: path.resolve(__dirname, 'public/web/assets/dist'),
-        filename: '[name].[chunkhash].bundle.min.js',
+        path: path.resolve(__dirname, 'public/assets/dist'),
+        filename: '[name].bundle.min.js',
         publicPath: '/'
     },
     module: {
@@ -51,7 +51,7 @@ const configuration = {
         }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
-            filename: '[name].[chunkhash].min.js',
+            filename: '[name].min.js',
             minChunks: function (module) {
                 return module.context && (module.context.indexOf('node_modules') !== -1);
             }
@@ -63,7 +63,7 @@ const configuration = {
             comments: false
         }),
         new ExtractTextPlugin({
-            filename: "[name].[chunkhash].min.css",
+            filename: "[name].min.css",
             allChunks: true
         }),
         new OptimiseCssAssetsPlugin({
@@ -82,12 +82,12 @@ const configuration = {
         }),
         new SpritesmithPlugin({
             src: {
-                cwd: path.resolve(__dirname, 'public/web/assets/images/sprites'),
+                cwd: path.resolve(__dirname, 'public/assets/images/sprites'),
                 glob: '*.png'
             },
             target: {
-                image: path.resolve(__dirname, 'public/web/assets/images/sprite.png'),
-                css: path.resolve(__dirname, 'public/assets/web/images/sprite.styl')
+                image: path.resolve(__dirname, 'public/assets/images/sprite.png'),
+                css: path.resolve(__dirname, 'public/assets/images/sprite.styl')
             },
             retina: '@2x',
             padding: 2

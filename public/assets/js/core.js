@@ -3,7 +3,7 @@
  * Minified version -> assets/dist/app.min.css
  */
 require('../scss/screen.scss');
-require('../../../node_modules/font-awesome/scss/font-awesome.scss');
+//require('../../../node_modules/font-awesome/scss/font-awesome.scss');
 
 /**
  * Core Javascript/Jquery functionality
