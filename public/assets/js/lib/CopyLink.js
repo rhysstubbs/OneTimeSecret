@@ -47,5 +47,4 @@ CopyLink.init = function () {
     var copyLink = new CopyLink();
 };
 
-
 module.exports = CopyLink;

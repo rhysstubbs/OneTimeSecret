@@ -4,15 +4,19 @@
 
 // ------------------------------------------------------------------------------------------------------
 // SITE COMPONENTS
-require('./lib/main.js');
-require('./lib/plugins.js');
-require('./lib/passgen-template.js');
-var CopyLink = require('./lib/CopyLink.js');
+require('./lib/main');
+require('./lib/plugins');
+require('./lib/passgen-template');
+var CopyLink = require('./lib/CopyLink');
+var Validator = require('./lib/FormValidator');
+var HelpToggler = require('./lib/HelpToggler');
 
 (function ($) {
 
     $(document).on('ready', function () {
         window.page = new Page();
+
+        $("#help").hide();
     });
 
     // ------------------------------------------------------------------------------------------------------
@@ -21,29 +25,10 @@ var CopyLink = require('./lib/CopyLink.js');
 
         CopyLink.init();
 
-        $("#help").hide();
+        Validator();
 
-        $('#btn-issue').click(function () {
-            if (!$("#help").is(":visible")) {
-                $("#help").fadeIn();
-            } else {
-                $("#help").fadeOut();
-            }
-            return false;
-        });
+        HelpToggler();
 
-        $('#createSecret').submit(function (ev) {
-            if (!$.trim($('#input-textarea').val())) {
-                ev.preventDefault();
-                if (!$('#no-text-warning').length) {
-                    var warning = document.createElement("p");
-                    warning.setAttribute("id", "no-text-warning");
-                    var warningText = document.createTextNode("Oops! You did not provide anything to share");
-                    warning.appendChild(warningText);
-                    document.getElementById('one').appendChild(warning);
-                }
-            }
-        });
     }
 
 })(jQuery);
